@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gay_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "texmod:gay_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "texmod:gay_ingot_from_smelting_gay_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gay_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "texmod:gay_ingot_from_smelting_gay_ore"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "texmod:block/crystalliser",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "texmod:block/crystalliser",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "texmod:block/crystalliser"
+    },
+    "facing=west": {
+      "model": "texmod:block/crystalliser",
+      "y": 90
+    }
+  }
+}

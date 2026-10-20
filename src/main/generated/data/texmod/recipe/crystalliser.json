@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "crystalliser",
+  "key": {
+    "#": "texmod:gay_ingot",
+    "G": "minecraft:glass",
+    "I": "minecraft:iron_block"
+  },
+  "pattern": [
+    "IGI",
+    "G#G",
+    "III"
+  ],
+  "result": {
+    "id": "texmod:crystalliser"
+  }
+}

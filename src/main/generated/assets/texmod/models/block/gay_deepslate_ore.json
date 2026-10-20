@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "texmod:block/gay_deepslate_ore_top",
+    "side": "texmod:block/gay_deepslate_ore"
+  }
+}

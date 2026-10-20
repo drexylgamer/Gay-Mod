@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 300,
+  "experience": 0.1,
+  "group": "gay_ingot",
+  "ingredient": "texmod:raw_gay",
+  "result": {
+    "id": "texmod:gay_ingot"
+  }
+}

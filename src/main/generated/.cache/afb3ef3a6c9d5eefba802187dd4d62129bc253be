@@ -1,0 +1,4 @@
+// 26.2	-999999999-01-01T00:00:00	Texmod/Tags for minecraft:item
+132c2c3b535979191d3937c3afde6dd2fd3defe5 data/minecraft/tags/item/mineable/pickaxe.json
+d48327a919eb6675d9f18f6db2de14c8bb71db27 data/minecraft/tags/item/needs_diamond_tool.json
+2a8e4463424681ed22b33d954617bf9b5fd02161 data/minecraft/tags/item/needs_iron_tool.json

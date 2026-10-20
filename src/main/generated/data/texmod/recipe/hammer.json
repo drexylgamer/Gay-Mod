@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "hammer",
+  "key": {
+    "#": "texmod:gay_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "  #",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "id": "texmod:hammer"
+  }
+}

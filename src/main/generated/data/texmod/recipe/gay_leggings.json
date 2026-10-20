@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "gay_leggings",
+  "key": {
+    "#": "texmod:gay_ingot"
+  },
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "result": {
+    "id": "texmod:gay_leggings"
+  }
+}

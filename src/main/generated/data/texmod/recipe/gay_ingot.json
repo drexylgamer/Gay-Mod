@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "texmod:block_of_gay"
+  ],
+  "result": {
+    "count": 9,
+    "id": "texmod:gay_ingot"
+  }
+}
