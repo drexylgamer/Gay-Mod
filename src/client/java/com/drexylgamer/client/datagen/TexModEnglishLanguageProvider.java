@@ -16,6 +16,12 @@ public class TexModEnglishLanguageProvider  extends FabricLanguageProvider {
         translationBuilder.add("item.texmod.gay_dust", "Gay Dust");
         translationBuilder.add("item.texmod.gay_ingot", "Gay Ingot");
         translationBuilder.add("item.texmod.hammer", "Hammer");
+        translationBuilder.add("item.texmod.gay_axe", "Gay Axe");
+        translationBuilder.add("item.texmod.gay_hoe", "Gay Hoe");
+        translationBuilder.add("item.texmod.gay_pickaxe", "Gay Pickaxe");
+        translationBuilder.add("item.texmod.gay_shovel", "Gay Shovel");
+        translationBuilder.add("item.texmod.gay_sword", "Gay Sword");
+        translationBuilder.add("item.texmod.gay_spear", "Gay Spear");
         translationBuilder.add("item.texmod.raw_gay", "Raw Gay");
         translationBuilder.add("block.texmod.block_of_gay", "Block Of Gay");
         translationBuilder.add("block.texmod.gay_ore", "Gay Ore");

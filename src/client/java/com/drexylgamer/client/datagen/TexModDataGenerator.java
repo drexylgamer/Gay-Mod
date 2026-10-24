@@ -18,6 +18,7 @@ public class TexModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(TexModWorldgenProvider::new);
         pack.addProvider((FabricDataGenerator.Pack.Factory<TexModEquipmentAssetProvider>) TexModEquipmentAssetProvider::new);
         pack.addProvider(TexModItemTagProvider::new);
+        pack.addProvider(TexModBlockTagProvider::new);
     }
 
     @Override

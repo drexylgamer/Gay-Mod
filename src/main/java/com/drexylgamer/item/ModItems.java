@@ -2,6 +2,8 @@ package com.drexylgamer.item;
 
 import com.drexylgamer.ModMobEffects;
 import com.drexylgamer.block.ModBlocks;
+import com.drexylgamer.tag.ModArmorMaterials;
+import com.drexylgamer.tag.ModToolMaterial;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -63,6 +65,42 @@ public class ModItems {
             new Item.Properties().pickaxe(ToolMaterial.IRON, 1.0F, -2.8F)
     );
 
+    public static final Item GAY_AXE = register(
+            ModItemIds.GAY_AXE,
+            Item::new,
+            new Item.Properties().axe(ModToolMaterial.GAY, 5.0F, -3.0F)
+    );
+
+    public static final Item GAY_HOE = register(
+            ModItemIds.GAY_HOE,
+            Item::new,
+            new Item.Properties().hoe(ModToolMaterial.GAY, -4.0F, 0.0F)
+    );
+
+    public static final Item GAY_PICKAXE = register(
+            ModItemIds.GAY_PICKAXE,
+            Item::new,
+            new Item.Properties().pickaxe(ModToolMaterial.GAY, 1.0F, -2.8F)
+    );
+
+    public static final Item GAY_SHOVEL = register(
+            ModItemIds.GAY_SHOVEL,
+            Item::new,
+            new Item.Properties().shovel(ModToolMaterial.GAY, 1.5F, -3.0F)
+    );
+
+    public static final Item GAY_SWORD = register(
+            ModItemIds.GAY_SWORD,
+            Item::new,
+            new Item.Properties().sword(ModToolMaterial.GAY, 3.0F, -2.4F)
+    );
+
+    public static final Item GAY_SPEAR = register(
+            ModItemIds.GAY_SPEAR,
+            Item::new,
+            new Item.Properties().spear(ModToolMaterial.GAY, 1.15F, 1.2F, 0.4F, 2.5F, 9.0F, 5.5F, 5.1F, 8.75F, 4.6F)
+    );
+
     public static final Item GAY_HELMET = register(
             ModItemIds.GAY_HELMET,
             Item::new,
@@ -102,6 +140,14 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.RAW_GAY));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GAY_AXE));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GAY_HOE));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GAY_PICKAXE));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GAY_SHOVEL));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((creativeTab) -> creativeTab.accept(ModItems.HAMMER));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS)
                 .register((creativeTab) -> creativeTab.accept(ModBlocks.BLOCK_OF_GAY));
@@ -111,6 +157,10 @@ public class ModItems {
                 .register((creativeTab) -> creativeTab.accept(ModBlocks.GAY_DEEPSLATE_ORE));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.PURE_CRYSTALLISED_GAY));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GAY_SWORD));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GAY_SPEAR));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT)
                 .register((creativeTab) -> creativeTab.accept(ModItems.GAY_HELMET));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT)

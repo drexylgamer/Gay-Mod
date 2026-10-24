@@ -52,6 +52,12 @@ public class TexModModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.PURE_CRYSTALLISED_GAY, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.GAY_CRYSTALS, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.HAMMER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GAY_AXE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GAY_HOE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GAY_PICKAXE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GAY_SHOVEL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GAY_SWORD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GAY_SPEAR, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.GAY_HELMET, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.GAY_CHESTPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.GAY_LEGGINGS, ModelTemplates.FLAT_ITEM);
