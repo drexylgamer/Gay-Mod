@@ -2,6 +2,7 @@ package com.drexylgamer;
 
 import com.drexylgamer.block.CrystallisingRecipe;
 import com.drexylgamer.block.ModBlocks;
+import com.drexylgamer.entity.ModEntityTypes;
 import com.drexylgamer.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -30,10 +31,11 @@ public class Texmod implements ModInitializer {
 	public void onInitialize() {
 
 
-		LOGGER.info("Hello Fabric world!");
-		ModItems.initialize();
-		ModBlocks.initialize();
-		ModMobEffects.initialize();
+		LOGGER.info("Initializing Mod");
+		ModItems.initialize(LOGGER);
+		ModBlocks.initialize(LOGGER);
+		ModMobEffects.initialize(LOGGER);
+		ModEntityTypes.initialize(LOGGER);
 
 		RecipeSynchronization.synchronizeRecipeSerializer(CRYSTALLISING_RECIPE_SERIALIZER);
 

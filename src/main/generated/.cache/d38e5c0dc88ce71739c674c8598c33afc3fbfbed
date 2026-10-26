@@ -1,0 +1,11 @@
+// 26.2	-999999999-01-01T00:00:00	Gay Mod/Tags for minecraft:item
+1b318dee08f84ed7724fb01d94be607f09abac7a data/minecraft/tags/item/axes.json
+7ff1b29c8698d352605883a36d92e6dea01b297c data/minecraft/tags/item/chest_armor.json
+f76716d2954b9bc2e1565eaea50ef67a2ab28af0 data/minecraft/tags/item/foot_armor.json
+9f3013e5cc0bc7c1c447af5edd533345f620e73d data/minecraft/tags/item/head_armor.json
+25391aaa1248600be86a0b611f5a0724668cd5bd data/minecraft/tags/item/hoes.json
+aba2f56475bb473e9c5aac30c0da10c87d793558 data/minecraft/tags/item/leg_armor.json
+4e1b64f8dd96c725e3dd418250630e8fd5c3d8ae data/minecraft/tags/item/pickaxes.json
+f3c804aef7b7b106501720ba78fe3037671213e4 data/minecraft/tags/item/shovels.json
+9840f27e41091da1da6b115a00e415e720955ac7 data/minecraft/tags/item/spears.json
+9bf90c022b7c4ca7c33d806618a4b7efceec9193 data/minecraft/tags/item/swords.json

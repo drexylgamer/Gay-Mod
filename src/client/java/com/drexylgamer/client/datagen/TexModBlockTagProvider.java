@@ -1,6 +1,7 @@
 package com.drexylgamer.client.datagen;
 
 import com.drexylgamer.block.ModBlockIds;
+import com.drexylgamer.client.TexmodClient;
 import com.drexylgamer.tag.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
@@ -9,10 +10,13 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.CompletableFuture;
 
 public class TexModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
+    public static final Logger LOGGER = LoggerFactory.getLogger(TexmodClient.ID);
     public static final TagKey<Block> NEEDS_DIAMOND_TOOL = TagKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("needs_diamond_tool"));
     public static final TagKey<Block> NEEDS_GAY_TOOL = TagKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("needs_gay_tool"));
     public static final TagKey<Block> MINEABLE_PICKAXE = TagKey.create(Registries.BLOCK, Identifier.withDefaultNamespace("mineable/pickaxe"));
@@ -24,6 +28,7 @@ public class TexModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
+        LOGGER.info("Adding BlockTags");
         builder(INCORRECT_FOR_NETHERITE_TOOL)
                 .addOptionalTag(ModTags.NEEDS_GAY_TOOL).setReplace(true);
         builder(INCORRECT_FOR_DIAMOND_TOOL)
@@ -40,5 +45,6 @@ public class TexModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider
         builder(NEEDS_GAY_TOOL)
                 .add(ModBlockIds.GAY_DEEPSLATE_ORE)
                 .setReplace(false);
+        LOGGER.info("Successfully Added BlockTags");
     }
 }

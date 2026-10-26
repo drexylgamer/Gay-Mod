@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.slf4j.Logger;
 
 import java.util.function.Function;
 
@@ -57,6 +58,8 @@ public class ModBlocks {
         return Registry.register(BuiltInRegistries.BLOCK, id, block);
     }
 
-    public static void initialize() {
+    public static void initialize(Logger LOGGER) {
+        LOGGER.info("Initializing ModBlocks");
+        LOGGER.info("Successfully Initialized ModBlocks");
     }
 }

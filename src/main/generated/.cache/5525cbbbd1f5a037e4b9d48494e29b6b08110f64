@@ -1,0 +1,4 @@
+// 26.2	-999999999-01-01T00:00:00	Gay Mod/Block Loot Tables
+6571b426ef22d5dcfd081d310ab442262376c3eb data/texmod/loot_table/blocks/block_of_gay.json
+d41b7eb246dfa590684f1781ca17c4df793fabf2 data/texmod/loot_table/blocks/gay_deepslate_ore.json
+bbd96e28a1c05d0c00d9f6eac1c2ed69ac83b61b data/texmod/loot_table/blocks/gay_ore.json

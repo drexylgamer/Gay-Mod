@@ -17,6 +17,7 @@ import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorType;
+import org.slf4j.Logger;
 
 import java.util.function.Function;
 
@@ -44,7 +45,11 @@ public class ModItems {
     public static final Item GAY_CRYSTALS = register(
             ModItemIds.GAY_CRYSTALS,
             Item::new,
-            new Item.Properties()
+            new Item.Properties().food(new FoodProperties
+                    .Builder()
+                    .nutrition(6)
+                    .saturationModifier(0.6F)
+                    .build())
     );
 
     public static final Item GAY_INGOT = register(
@@ -132,7 +137,9 @@ public class ModItems {
         return item;
     }
 
-    public static void initialize() {
+    public static void initialize(Logger LOGGER) {
+        LOGGER.info("Initializing ModItems");
+        LOGGER.info("Registering CreativeTab Items");
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.GAY_DUST));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
@@ -169,5 +176,6 @@ public class ModItems {
                 .register((creativeTab) -> creativeTab.accept(ModItems.GAY_LEGGINGS));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT)
                 .register((creativeTab) -> creativeTab.accept(ModItems.GAY_BOOTS));
+        LOGGER.info("Successfully Initialized ModItems");
     }
 }

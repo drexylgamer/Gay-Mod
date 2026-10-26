@@ -1,6 +1,7 @@
 package com.drexylgamer.client.datagen;
 
 import com.drexylgamer.block.ModBlocks;
+import com.drexylgamer.client.TexmodClient;
 import com.drexylgamer.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -13,20 +14,25 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.block.Blocks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class TexModRecipeProvider extends FabricRecipeProvider {
+    public static final Logger LOGGER = LoggerFactory.getLogger(TexmodClient.ID);
     public TexModRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
     protected RecipeProvider createRecipeProvider(HolderLookup.Provider registryLookup, RecipeOutput exporter) {
+        LOGGER.info("Creating Recipes");
         return new RecipeProvider(registryLookup, exporter) {
             @Override
             public void buildRecipes() {
+
                 HolderLookup.RegistryLookup<Item> itemLookup = registries.lookupOrThrow(Registries.ITEM);
                 // GAY INGOT
                 shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.GAY_INGOT, 9)
@@ -218,8 +224,10 @@ public class TexModRecipeProvider extends FabricRecipeProvider {
                         .group("gay_boots")
                         .unlockedBy(getHasName(ModItems.GAY_INGOT), has(ModItems.GAY_INGOT))
                         .save(output);
+            LOGGER.info("Successfully Created Recipes");
             }
         };
+
     }
 
     @Override

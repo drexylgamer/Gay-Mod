@@ -1,6 +1,7 @@
 package com.drexylgamer.client.datagen;
 
 import com.drexylgamer.block.ModBlocks;
+import com.drexylgamer.client.TexmodClient;
 import com.drexylgamer.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
@@ -10,16 +11,20 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.CompletableFuture;
 
 public class TexModBlockLootTableProvider extends FabricBlockLootSubProvider {
+    public static final Logger LOGGER = LoggerFactory.getLogger(TexmodClient.ID);
     public TexModBlockLootTableProvider(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
     @Override
     public void generate() {
+        LOGGER.info("Generating LootTables");
         dropSelf(ModBlocks.BLOCK_OF_GAY);
         dropWhenSilkTouch(ModBlocks.GAY_ORE);
         dropWhenSilkTouch(ModBlocks.GAY_DEEPSLATE_ORE);
@@ -29,6 +34,7 @@ public class TexModBlockLootTableProvider extends FabricBlockLootSubProvider {
         add(ModBlocks.GAY_DEEPSLATE_ORE, LootTable.lootTable().withPool(LootPool.lootPool()
                 .setRolls(new UniformGenerator(new ConstantValue(2), new ConstantValue(4)))
                 .add(LootItem.lootTableItem(ModItems.RAW_GAY))));
+        LOGGER.info("Successfully Generated LootTables");
     }
 }
 

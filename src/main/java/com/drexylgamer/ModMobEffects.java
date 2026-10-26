@@ -5,6 +5,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffect;
+import org.slf4j.Logger;
 
 import static com.drexylgamer.Texmod.MOD_ID;
 
@@ -21,8 +22,9 @@ public class ModMobEffects {
         );
     }
 
-    public static void initialize() {
-
+    public static void initialize(Logger LOGGER) {
+        LOGGER.info("Initializing ModMobEffects");
+        LOGGER.info("Successfully Initialized ModMobEffects");
     }
 
 }

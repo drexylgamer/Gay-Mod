@@ -1,0 +1,6 @@
+// 26.2	-999999999-01-01T00:00:00	Gay Mod/Tags for minecraft:block
+238986bbcd48eb559a1ea4f6bea43742e6018ffc data/minecraft/tags/block/incorrect_for_diamond_tool.json
+238986bbcd48eb559a1ea4f6bea43742e6018ffc data/minecraft/tags/block/incorrect_for_netherite_tool.json
+674268283b9b5b0d5d2bb3435723dbddf23f2836 data/minecraft/tags/block/mineable/pickaxe.json
+2a8e4463424681ed22b33d954617bf9b5fd02161 data/minecraft/tags/block/needs_diamond_tool.json
+d48327a919eb6675d9f18f6db2de14c8bb71db27 data/minecraft/tags/block/needs_gay_tool.json

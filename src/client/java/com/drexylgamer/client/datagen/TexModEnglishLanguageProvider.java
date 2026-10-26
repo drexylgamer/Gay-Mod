@@ -1,18 +1,24 @@
 package com.drexylgamer.client.datagen;
 
+import com.drexylgamer.client.TexmodClient;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.CompletableFuture;
 
 public class TexModEnglishLanguageProvider  extends FabricLanguageProvider {
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(TexmodClient.ID);
     public TexModEnglishLanguageProvider(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, "en_us", registryLookup);
     }
 
     @Override
     public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
+        LOGGER.info("Adding English Translations");
         translationBuilder.add("item.texmod.gay_dust", "Gay Dust");
         translationBuilder.add("item.texmod.gay_ingot", "Gay Ingot");
         translationBuilder.add("item.texmod.hammer", "Hammer");
@@ -34,5 +40,6 @@ public class TexModEnglishLanguageProvider  extends FabricLanguageProvider {
         translationBuilder.add("item.texmod.gay_chestplate", "Gay Chestplate");
         translationBuilder.add("item.texmod.gay_leggings", "Gay Leggings");
         translationBuilder.add("item.texmod.gay_boots", "Gay Boots");
+        LOGGER.info("Successfully Added English Translations");
     }
 }

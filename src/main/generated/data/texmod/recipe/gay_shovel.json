@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "gay_shovel",
+  "key": {
+    "*": "texmod:gay_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    " * ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "texmod:gay_shovel"
+  }
+}

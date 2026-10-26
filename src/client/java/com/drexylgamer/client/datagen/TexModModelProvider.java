@@ -2,6 +2,7 @@ package com.drexylgamer.client.datagen;
 
 import com.drexylgamer.Texmod;
 import com.drexylgamer.block.ModBlocks;
+import com.drexylgamer.client.TexmodClient;
 import com.drexylgamer.item.ModItems;
 import com.drexylgamer.tag.ModEquipmentAssets;
 import com.mojang.serialization.Codec;
@@ -22,6 +23,8 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.level.block.Blocks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,6 +34,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 public class TexModModelProvider extends FabricModelProvider {
+    public static final Logger LOGGER = LoggerFactory.getLogger(TexmodClient.ID);
     public TexModModelProvider(FabricPackOutput output) {
         super(output);
 
@@ -38,14 +42,17 @@ public class TexModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerator) {
+        LOGGER.info("Generating BlockState Models");
         blockModelGenerator.createTrivialCube(ModBlocks.BLOCK_OF_GAY);
         blockModelGenerator.createTrivialCube(ModBlocks.GAY_ORE);
         blockModelGenerator.createTrivialBlock(ModBlocks.GAY_DEEPSLATE_ORE, TexturedModel.COLUMN_ALT);
         blockModelGenerator.createAnvil(ModBlocks.CRYSTALLISER);
+        LOGGER.info("Successfully Generated BlockState Models");
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
+        LOGGER.info("Generating Item Models");
         itemModelGenerator.generateFlatItem(ModItems.GAY_DUST, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.GAY_INGOT, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.RAW_GAY, ModelTemplates.FLAT_ITEM);
@@ -62,5 +69,6 @@ public class TexModModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.GAY_CHESTPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.GAY_LEGGINGS, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.GAY_BOOTS, ModelTemplates.FLAT_ITEM);
+        LOGGER.info("Successfully Generated Item Models");
     }
 }
